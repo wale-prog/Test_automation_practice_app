@@ -102,11 +102,3 @@ Both projects currently point `baseURL` at a shared ngrok tunnel.
 ## CI
 
 A GitHub Actions workflow (`.github/workflows/playwright.yml`) runs the full Playwright suite on pushes and pull requests to `main`/`master` and uploads the HTML report as a build artifact.
-
-## Security note
-
-`.env` is currently **not** in `.gitignore` and has already been committed with what appear to be real credentials. Before relying on this repo further:
-
-1. Rotate the `DEV_EMAIL` / `DEV_PASSWORD` credentials for the affected account.
-2. Remove `.env` from git tracking (`git rm --cached .env`) and add it to `.gitignore`.
-3. If this repo is or will be public, consider scrubbing `.env` from git history as well.

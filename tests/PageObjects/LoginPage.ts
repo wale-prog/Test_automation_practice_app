@@ -1,8 +1,7 @@
 import { Page, Locator } from '@playwright/test'
+import { PageBase } from './PageBase';
 
-export class LoginPage {
-
-    readonly page: Page;
+export class LoginPage extends PageBase {
 
     // Locators
     readonly emailField: Locator;
@@ -13,7 +12,7 @@ export class LoginPage {
     readonly emptyPasswordErrorMsg: Locator
 
     constructor(page: Page) {
-        this.page = page
+        super(page)
         this.emailField = page.getByTestId('login-username-input');
         this.passwordField = page.getByTestId('login-password-input');
         this.submitBtn = page.getByTestId('login-submit-button');
@@ -23,6 +22,7 @@ export class LoginPage {
     }
 
     async getEmailField(): Promise<Locator> {
+        this.clearField(this.emailField)
         return this.emailField;
     };
 

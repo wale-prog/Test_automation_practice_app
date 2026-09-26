@@ -10,3 +10,5 @@ node_modules/
 # Environment / secrets
 .env
 cookie.json
+allure-results
+reports

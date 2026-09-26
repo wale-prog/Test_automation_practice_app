@@ -1,6 +1,6 @@
 import { test, expect } from '@playwright/test';
 
-test.describe('Login API tests', () => {
+test.describe('Login API tests', {tag: "@sanity"}, () => {
 
     test('Validate that user cannot login with empty credentials', async({request}) => {
         const startTime = Date.now();

@@ -57,7 +57,7 @@ export default defineConfig({
 
       use: { 
         ...devices['Desktop Chrome'],
-        baseURL: 'https://fossil-unsecured-viability.ngrok-free.dev',
+        baseURL: 'https://practice.walpetsolutions.com',
         extraHTTPHeaders: {
           'ngrok-skip-browser-warning': "true"
         },
@@ -69,7 +69,7 @@ export default defineConfig({
       name: 'API Tests',
       testDir: 'tests/Tests/API',
       use: { 
-        baseURL: 'https://fossil-unsecured-viability.ngrok-free.dev'
+        baseURL: 'https://practice.walpetsolutions.com'
       },
     },
 

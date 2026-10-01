@@ -25,7 +25,7 @@ jobs:
         distribution: temurin
         java-version: '17'
     - name: Install Allure
-      run: npm install -g allure
+      run: npm install -g allure-commandline@2.30.0
     - name: Install Playwright Browsers
       run: npx playwright install --with-deps
     - name: Run Playwright tests

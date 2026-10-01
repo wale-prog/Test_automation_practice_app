@@ -16,8 +16,10 @@ jobs:
         node-version: lts/*
     - name: Install dependencies
       run: npm ci
-    - name: Install Java
-      run: apt-get update -y && apt-get install -y --no-install-recommends default-jre-headless
+    - uses: actions/setup-java@v4
+      with:
+        distribution: temurin
+        java-version: '17'
     - name: Install Allure
       run: npm install -g allure
     - name: Install Playwright Browsers
